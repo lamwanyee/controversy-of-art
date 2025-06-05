@@ -1738,6 +1738,10 @@ Blog
   z-index: 200;
 }
 
+.trendpic{
+  margin-top: 5%;
+}
+
 .blog-post {
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   border-radius: 25px;
@@ -1807,6 +1811,7 @@ Blog
 
 .post-item {
   margin-bottom: 62px;
+  
 }
 
 .last-post-item {
