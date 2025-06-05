@@ -452,6 +452,8 @@ header
 .header-area .main-nav {
   min-height: 80px;
   background: transparent;
+  position: relative;
+  z-index: 10;
 }
 
 .header-area .main-nav .logo {
@@ -1719,6 +1721,7 @@ Blog
 .blog {
   position: relative;
   padding-top: 130px;
+  z-index: 1;
 }
 
 .blog .section-heading {
