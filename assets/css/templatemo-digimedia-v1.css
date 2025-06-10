@@ -1880,35 +1880,11 @@ contact
 }
 
 
-form#contact:before {
-  background-image: url(../images/contact-top-right.png);
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 726px;
-  height: 78px;
-  background-repeat: no-repeat;
-  content: '';
-  z-index: 1;
-}
-
 .contact-dec img {
   max-width: 224px;
   position: absolute;
   right: 25px;
   top: -242px;
-}
-
-form#contact:after {
-  background-image: url(../images/contact-bottom-right.png);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 532px;
-  height: 106px;
-  background-repeat: no-repeat;
-  content: '';
-  z-index: 1;
 }
 
 form#contact {
@@ -1919,13 +1895,6 @@ form#contact {
   text-align: center;
 }
 
-form#contact #map iframe {
-  border-top-left-radius: 23px;
-  border-bottom-left-radius: 23px;
-  margin-bottom: -7px;
-  position: relative;
-  z-index: 2;
-}
 
 .fill-form {
   padding: 0px 60px 80px 30px;
@@ -1970,7 +1939,7 @@ form#contact input {
   font-size: 15px;
   font-weight: 300;
   color: #2a2a2a;
-  padding: 0px 20px;
+  padding: 10px 20px;
   border-radius: 23px;
   margin-top: 30px;
 }
@@ -2007,7 +1976,7 @@ form#contact button {
   font-size: 15px;
   font-weight: 400;
   color: #fa65b1;
-  margin-top: 30px;
+  margin-top: 40px;
   width: 100%;
   text-transform: capitalize;
   padding: 12px 25px;
