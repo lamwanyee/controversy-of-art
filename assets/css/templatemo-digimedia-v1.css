@@ -278,6 +278,9 @@ intro
   margin-left:150px;
 
 }
+.text-21{
+  margin-left:170px;
+}
 .hre{
    text-decoration: none;
    font-size: 15px;
@@ -290,7 +293,8 @@ intro
    font-size: 15px;
     line-height: 30px;
     font-weight: 300;
-    color: #dc94e5;}
+    color: #dc94e5;
+  }
 .landingpic{
   height:550px;
   width:400px;
