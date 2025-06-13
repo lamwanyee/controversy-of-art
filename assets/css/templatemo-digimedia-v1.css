@@ -267,6 +267,12 @@ intro
 }
 */
 
+.landingpic{
+  height:500px;
+  width:400px;
+  margin-bottom:30px;
+  margin-right:30px;
+}
 .intro-banner img {
   max-width: 152px;
   margin-bottom: 30px;
