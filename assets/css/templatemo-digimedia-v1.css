@@ -266,7 +266,31 @@ intro
   z-index: 2;
 }
 */
+.text-19{
+  margin-left:160px;
+  font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #afafaf;
 
+}
+.text-20{
+  margin-left:150px;
+
+}
+.hre{
+   text-decoration: none;
+   font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #afafaf;
+}
+.hre:visited{
+   text-decoration: none;
+   font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #dc94e5;}
 .landingpic{
   height:550px;
   width:400px;
