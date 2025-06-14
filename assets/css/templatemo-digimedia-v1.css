@@ -49,6 +49,10 @@ figure, header, nav, section, article, aside, footer, figcaption {
   display: block;
   clear: both;
 }
+.eight{
+  margin-bottom:50px;
+  margin-left:20px;
+}
 
 .logo {
   width: 10%;
@@ -1091,10 +1095,12 @@ Banner Style
   text-align: right;
   position: relative;
   z-index: 20;
+  align-items: end;
 }
 
 .main-banner .right-image img {
   max-width: 593px;
+  align-items: end;
 }
 
 
@@ -1981,7 +1987,7 @@ form#contact input {
   color: #2a2a2a;
   padding: 10px 20px;
   border-radius: 23px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 form#contact input::placeholder {

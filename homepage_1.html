@@ -7,6 +7,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <style>
+       .art-controversy-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .content-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .image-content img {
+            max-width: 80%;
+            height: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h4 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .ticks-list {
+            margin-bottom: 20px;
+        }
+        
+        .ticks-list span {
+            display: block;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .ticks-list .fa-check {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: #4CAF50;
+        }
+        
+        .image-credit{
+          margin-top:20px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-row {
+                flex-direction: column;
+            }
+            
+            .image-content {
+                order: -1;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -219,24 +291,25 @@ https://templatemo.com/tm-568-digimedia
                   <ul class="nacc">
                     <li class="active">
                       <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-6 align-self-center">
-                              <div class="left-text">
-                                <h4>Controversy of Art around 18th century</h4>
-                                <div class="ticks-list"><span><i class="fa fa-check"></i> In the 18th century, controversies in art often stemmed from a clash between established norms and emerging ideas, particularly those related to the Enlightenment and evolving artistic styles. Criticism could arise from challenging traditional themes, or even the very concept of art itself.</span> <span><i class="fa fa-check"></i> The Swarm of Cupids:Jean-Honoré Fragonard's painting The Swarm of Cupids was harshly criticized by Diderot and others for its perceived lack of narrative and artistic merit.</span> <span><i class="fa fa-check"></i> Challenge to Traditional Art:As the 18th century saw the rise of new styles like Rococo and Neoclassicism, artists and their work were sometimes met with resistance for departing from established norms.</span>
-                                  <span><i class="fa fa-check"></i> Art as a Social Commentary:Some works, like Sir Joshua Reynolds' portrait of the Prince of Wales, were controversial due to their social and political implications, potentially timed to coincide with a scandal, as noted by the Royal Academy Chronicle.</span> <span><i class="fa fa-check"></i> The function of art:The 18th century saw a shift in how art was viewed, with some arguing for art serving itself as a form of aesthetic experience, while others saw it as serving society or the state, leading to ongoing debates about art's purpose.</span>
-                                <p>Photo by: Alcazar, Segovia, Spain, 1836 By David Roberts</p>
-                              </div>
-                            </div>
-                            <div class="col-lg-6">
-                              <div class="right-image">
-                                <img src="assets/images/castle.png">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                        <div class="art-controversy-container">
+        <div class="content-row">
+            <div class="text-content left-text">
+                <h4 class="eight">Controversy of Art around 18th century</h4>
+                <div class="ticks-list">
+                    <span><i class="fa fa-check"></i> In the 18th century, controversies in art often stemmed from a clash between established norms and emerging ideas, particularly those related to the Enlightenment and evolving artistic styles. Criticism could arise from challenging traditional themes, or even the very concept of art itself.</span>
+                    <span><i class="fa fa-check"></i> The Swarm of Cupids: Jean-Honoré Fragonard's painting The Swarm of Cupids was harshly criticized by Diderot and others for its perceived lack of narrative and artistic merit.</span>
+                    <span><i class="fa fa-check"></i> Challenge to Traditional Art: As the 18th century saw the rise of new styles like Rococo and Neoclassicism, artists and their work were sometimes met with resistance for departing from established norms.</span>
+                    <span><i class="fa fa-check"></i> Art as a Social Commentary: Some works, like Sir Joshua Reynolds' portrait of the Prince of Wales, were controversial due to their social and political implications, potentially timed to coincide with a scandal, as noted by the Royal Academy Chronicle.</span>
+                    <span><i class="fa fa-check"></i> The function of art: The 18th century saw a shift in how art was viewed, with some arguing for art serving itself as a form of aesthetic experience, while others saw it as serving society or the state, leading to ongoing debates about art's purpose.</span>
+                </div>
+                
+            </div>
+            <div class="image-content">
+                <img src="assets/images/castle.png" alt="Alcazar, Segovia, Spain">
+                <div class="image-credit hre">Photo by: Alcazar, Segovia, Spain, 1836 By David Roberts</div>
+            </div>
+        </div>
+    </div>
                     </li>
                     <li>
                       <div>
