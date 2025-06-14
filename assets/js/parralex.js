@@ -1,33 +1,19 @@
-const sections = document.querySelectorAll('.image-section');
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.image-section');
 
-const activateSection = (index) => {
-  sections.forEach((sec, i) => {
-    sec.classList.remove('active', 'prev');
-    if (i === index) {
-      sec.classList.add('active');
-    } else if (i < index) {
-      sec.classList.add('prev');
-    }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.3
   });
-};
 
-window.addEventListener('wheel', (e) => {
-  if (e.deltaY > 0) {
-    // Scroll down
-    if (currentIndex < sections.length - 1) {
-      currentIndex++;
-      activateSection(currentIndex);
-    }
-  } else {
-    // Scroll up
-    if (currentIndex > 0) {
-      currentIndex--;
-      activateSection(currentIndex);
-    }
-  }
-});
-
-window.addEventListener('load', () => {
-  activateSection(currentIndex);
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 });

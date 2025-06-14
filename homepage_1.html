@@ -356,9 +356,9 @@ https://templatemo.com/tm-568-digimedia
           <div class="loop owl-carousel">
             <div class="item">
               <a href="#">
-                <div class="portfolio-item">
+                <div class="portfolio-item image-section">
                 <div class="thumb">
-                  <img src="assets/images/modern art.png" alt="">
+                  <img src="assets/images/modern art.png" alt="modernartpic">
                 </div>
                 <div class="down-content">
                   <h4>Prompt used:</h4>
@@ -369,7 +369,7 @@ https://templatemo.com/tm-568-digimedia
             </div>
             <div class="item">
               <a href="#">
-                <div class="portfolio-item">
+                <div class="portfolio-item image-section">
                 <div class="thumb">
                   <img src="assets/images/splash art.png" alt="">
                 </div>
@@ -382,7 +382,7 @@ https://templatemo.com/tm-568-digimedia
             </div>
             <div class="item">
               <a href="#">
-                <div class="portfolio-item">
+                <div class="portfolio-item image-section">
                 <div class="thumb">
                   <img src="assets/images/painting.png" alt="">
                 </div>
@@ -395,20 +395,20 @@ https://templatemo.com/tm-568-digimedia
             </div>
             <div class="item">
               <a href="#">
-                <div class="portfolio-item">
+                <div class="portfolio-item image-section">
                 <div class="thumb">
                   <img src="assets/images/tech city art.png" alt="">
                 </div>
                 <div class="down-content">
                   <h4>Prompt used:</h4>
-                  <span>tech art</span>
+                  <span>tech city</span>
                 </div>
               </div>
               </a>  
             </div>
             <div class="item">
               <a href="#">
-                <div class="portfolio-item">
+                <div class="portfolio-item image-section">
                 <div class="thumb">
                   <img src="assets/images/landscape art.png" alt="">
                 </div>
@@ -424,7 +424,6 @@ https://templatemo.com/tm-568-digimedia
       </div>
     </div>
   </div>
-  <script src="assets/js/parralex.js"></script>
   
   <div id="blog" class="blog">
     <div class="container">
@@ -501,7 +500,7 @@ https://templatemo.com/tm-568-digimedia
           </div>
         </div>
         <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" action="" method="post">
+          <form id="contact" action="" method="post" onsubmit="sendMail(); return false;">
             <div class="row">
               <div class="col-lg-12">
                 <div class="contact-dec">
@@ -509,7 +508,7 @@ https://templatemo.com/tm-568-digimedia
                 </div>
               </div>
                 <div class="col-lg-12">
-                <div class="fill-form">
+                <div class="fill-form ">
                   <div class="row">
                     <div class="col-lg-5">
                       <fieldset>
@@ -518,7 +517,7 @@ https://templatemo.com/tm-568-digimedia
                       </fieldset>
                       <fieldset>
                         <label for="email"></label>
-                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                        <input type="email" name="user_email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
                       </fieldset>
                       <fieldset>
                         <label for="subject"></label>

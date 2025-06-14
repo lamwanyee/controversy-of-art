@@ -1137,6 +1137,7 @@
 		position = this.normalize(position, true);
 		return this._items[position];
 	};
+	
 
 	/**
 	 * Gets an item at the specified relative position.
