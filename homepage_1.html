@@ -412,91 +412,141 @@ https://templatemo.com/tm-568-digimedia
     </div>
   </div>
   <div id="portfolio" class="our-portfolio section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
           <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
             <h6>AI art gallery</h6>
             <h4>Embrace in a gallery created by Canva's <em> AI</em></h4>
-            <div class="line-dec"></div>
-          </div>
-        </div>
+
+  <div class="scroll-container">
+    <div class="scroll-gallery" id="horizontalGallery">
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?modern-art" alt="modern">
+        <div class="caption"><strong>Prompt:</strong> modern art</div>
       </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?painting" alt="painting">
+        <div class="caption"><strong>Prompt:</strong> painting</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?sketch" alt="sketch">
+        <div class="caption"><strong>Prompt:</strong> sketch</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?landscape-art" alt="landscape">
+        <div class="caption"><strong>Prompt:</strong> landscape</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?abstract-art" alt="abstract">
+        <div class="caption"><strong>Prompt:</strong> abstract</div>
+      </div>
+      <img src="https://source.unsplash.com/400x300/?abstract-art" alt="abstract">
+        <div class="caption"><strong>Prompt:</strong> abstract</div>
     </div>
-    <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="loop owl-carousel">
-            <div class="item">
-              <a href="#">
-                <div class="portfolio-item image-section">
-                <div class="thumb">
-                  <img src="assets/images/modern art.png" alt="modernartpic">
-                </div>
-                <div class="down-content">
-                  <h4>Prompt used:</h4>
-                  <span>modern art</span>
-                </div>
-              </div>
-              </a>  
-            </div>
-            <div class="item">
-              <a href="#">
-                <div class="portfolio-item image-section">
-                <div class="thumb">
-                  <img src="assets/images/splash art.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Prompt used:</h4>
-                  <span>splash art</span>
-                </div>
-              </div>
-              </a>  
-            </div>
-            <div class="item">
-              <a href="#">
-                <div class="portfolio-item image-section">
-                <div class="thumb">
-                  <img src="assets/images/painting.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Prompt used:</h4>
-                  <span>painting</span>
-                </div>
-              </div>
-              </a>  
-            </div>
-            <div class="item">
-              <a href="#">
-                <div class="portfolio-item image-section">
-                <div class="thumb">
-                  <img src="assets/images/tech city art.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Prompt used:</h4>
-                  <span>tech city</span>
-                </div>
-              </div>
-              </a>  
-            </div>
-            <div class="item">
-              <a href="#">
-                <div class="portfolio-item image-section">
-                <div class="thumb">
-                  <img src="assets/images/landscape art.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Prompt used:</h4>
-                  <span>landscape-art</span>
-                </div>
-              </div>
-              </a>  
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #f9f9f9;
+      overflow-x: hidden;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .scroll-container {
+      width: 100%;
+      position: relative;
+    }
+
+    .scroll-gallery {
+      display: flex;
+      gap: 30px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      padding: 40px;
+      height: 400px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    }
+
+    .gallery-item {
+      min-width: 300px;
+      flex: 0 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+      transform: translateX(100px) scale(0.95);
+      opacity: 0;
+      transition: all 1s ease;
+    }
+
+    .gallery-item.visible {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .caption {
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Hide scrollbar */
+    .scroll-gallery::-webkit-scrollbar {
+      display: none;
+    }
+    .scroll-gallery {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const gallery = document.getElementById('horizontalGallery');
+        
+        // Improved horizontal scroll with wheel
+        gallery.addEventListener('wheel', function(e) {
+          if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+            return; // Let horizontal scroll work naturally
+          }
+          
+          e.preventDefault();
+          this.scrollLeft += e.deltaY * 1; // Increased multiplier for better response
+          
+          // Smooth snap to items
+          clearTimeout(gallery.scrollTimeout);
+          gallery.scrollTimeout = setTimeout(() => {
+            const itemWidth = gallery.querySelector('.gallery-item').offsetWidth + 30; // Include gap
+            const scrollPos = gallery.scrollLeft;
+            gallery.scrollTo({
+              left: Math.round(scrollPos / itemWidth) * itemWidth,
+              behavior: 'smooth'
+            });
+          }, 100);
+        }, { passive: false });
+  
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            entry.target.classList.toggle('visible', entry.isIntersecting);
+          });
+        }, { threshold: 0.5 });
+  
+        document.querySelectorAll('.gallery-item').forEach(item => observer.observe(item));
+      });
+    </script>
   
   <div id="blog" class="blog">
     <div class="container">
