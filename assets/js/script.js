@@ -1,5 +1,5 @@
 function sendMail(event) {
-    event.preventDefault(); // Prevents the form from submitting normally
+    event.preventDefault(); // Prevent form from submitting normally
 
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
@@ -25,3 +25,4 @@ function sendMail(event) {
             alert("Failed to send email: " + JSON.stringify(error));
         });
 }
+
