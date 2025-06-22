@@ -44,6 +44,11 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 
 /* clear fix */
+.nav-1{
+  display:flex;
+  margin-left:200px;
+  margin-top:50px;
+}
 .grid:after {
   content: '';
   display: block;
